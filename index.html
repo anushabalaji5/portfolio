@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Personal Portfolio | Anusha B</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__bar">
+        <a href="#"><span class="logo nav__logo">A</span> Anusha</a>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="btn">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn__large">Contact</a>
+    </nav>
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="assets/header.jpg" alt="header" />
+      </div>
+      <div class="header__content">
+        <div>
+          <h1>Hi,<br />I'm Anusha<br/>WebDeveloper</h1>
+        </div>
+        <p class="section__description">
+          Hello! I'm Anusha B, a passionate web developer with expertise in front-end and back-end technologies. I love building responsive, user-friendly websites and applications. With a strong foundation in HTML, CSS, JavaScript, and modern frameworks, I aim to create seamless digital experiences. Explore my work and let's connect!"
+        </p>
+        <div class="header__btn">
+          <button onclick="window.location.href='mailto:anushabalaji5@gmail.com'" class="btn">Hire Me Now</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="assets/bg.png" alt="bg" class="about__bg-1" />
+        <img src="assets/bg.png" alt="bg" class="about__bg-2" />
+        <img src="assets/about.jpg" alt="about" class="about__img" />
+      </div>
+      <div class="about__content">
+        <h2 class="section__header">Bit About Me</h2>
+        <p class="section__description">
+          A passionate web developer with a creative flair and a knack for
+          turning visions into reality. My journey in web development began with
+          a fascination for coding and design, and it has evolved into a career
+          where I blend aesthetics with functionality. With a focus on user
+          experience and a commitment to staying updated with the latest
+          industry trends, I'm dedicated to creating web solutions that not only
+          meet but exceed expectations.
+        </p>
+        <div class="about__btn">
+          <button onclick="window.open('assets/cv.pdf')"  class="btn">Download CV</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section_container education_container" id="education">
+      <h2 class="section__header">Education</h2>
+      <div class="education__grid">
+        <div class="education__card">
+          <div class="education__header">
+            <h4>Bachelor of Engineering (B.E)</h4>
+            <p><strong>Velammal Engineering Colleage</strong> | 2022 - 2026</p>
+          </div>
+          <div class="education__content">
+            <p>Electronics & Communication Engineering</p>
+            <p>CGPA: 8.12</p>
+            <ul>
+              <li>Relevant coursework: Cloud Computing ,Networking ,Web Development, DBMS ,VLSI,Drone System Simulation</li>
+              <li>Member of Computer Science Society</li>
+            </ul>
+          </div>
+        </div>
+        <div class="education__card">
+          <div class="education__header">
+            <h4>Certifications</h4>
+          </div>
+          <div class="education__content">
+            <ul>
+              <li>AWS Cloud Practitioner Essentials</li>
+              <li>Cloud Computing and Foundation</li>
+              <li>Data Structures and Algorithms in Java</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Work Experience / Internship -->
+    <section class="section_container experience_container" id="experience">
+      <h2 class="section__header">Work Experience</h2>
+      <div class="experience__grid">
+        <div class="experience__card">
+          <div class="experience__header">
+            <h4>Web Development Intern</h4>
+            <p><strong>Nexspan Technology Pvt Ltd</strong> | Nov'24 - Dec'24</p>
+          </div>
+          <div class="experience__content">
+            <ul>
+              <li>Developed and maintained front-end features using React.js.</li>
+              <li>Collaborated with the team to optimize website performance.</li>
+              <li>Fixed bugs and improved UI/UX responsiveness.</li>
+              <li>Participated in daily standups and code reviews.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="experience__card">
+          <div class="experience__header">
+            <h4>Project Intern</h4>
+            <p><strong>Defense research and development organization (DRDO)</strong> June'24 - July'24</p>
+          </div>
+          <div class="experience__content">
+            <ul>
+              <li>Worked closely with research scientists and engineers improving skills in data analysis simulation and technical documentation</li>
+              <li>Acquired hands on experience with advanced tools software and lab equipments used in defense R&D.</li>
+              <li>Learned the importance of precision discipline and adherence to safety protocols in a high security innovation driven environment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section_container projects_container" id="projects">
+      <h2 class="section__header">My Projects</h2>
+      <p class="section__description">
+        Here are some of my key projects showcasing my technical skills and creativity.
+      </p>
+      <div class="projects__grid">
+        <div class="projects__card">
+          <img src="assets/project-1.jpg" alt="E-Commerce Platform for Cloathing" />
+          <div class="projects__content">
+            <h2>Kenpachi.in – E-Commerce Website</h2>
+  <br>
+  <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Bootstrap, Flexbox/Grid, Razorpay Integration, Responsive Design, jQuery</p>
+  <br>
+  <p><strong>About:</strong> Developed a responsive e-commerce front-end for Kenpachi Apparel, a brand focused on oversized anime-themed clothing.</p>
+  <br>
+  <p><strong>Approach:</strong> Designed a dynamic, mobile-friendly UI highlighting products, brand identity, and customer ease-of-use.</p>
+  <br>
+  <p><strong>Method:</strong> Utilized Bootstrap for layout consistency, integrated Razorpay for secure payments, implemented product categorization, animated elements, and contact features to boost customer interaction and brand presence.</p>
+
+            <div class="projects__tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>BootStrap</span>
+              <span>Razorpay</span>
+            </div>
+            <a href="https://kenpachi.in/" class="projects__link">View Project →</a>
+            <br>
+            <a href="https://github.com/anushabalaji5/Kenpachi-E-Commerce-website-.git" class="projects__link">Source Code →</a>
+            <br>
+            <a href="https://youtu.be/D7RQmkPAEb8?si=9ppu62AUdp7g1A2z" class="projects__link">View Project Video→</a>
+          </div>
+        </div>
+        <div class="projects__card">
+          <img src="assets/project-2.jpg" alt="Task Manager" />
+          <div class="projects__content">
+            <br>
+            <h2>Developer Work-Life Balance Prediction System</h2>
+  <br>
+  <p><strong>Tech Stack:</strong> Java, Spring Boot, Weka Machine Learning, Thymeleaf</p>
+  <br>
+  <p><strong>About:</strong> Developed a predictive analytics system to evaluate developer work-life balance using organizational behavior metrics.</p>
+  <br>
+  <p><strong>Approach:</strong> Implemented Weka's RandomForest classifier with Spring Boot backend for enterprise-grade prediction accuracy.</p>
+  <br>
+  <p><strong>Method:</strong> Built an interactive web interface with Thymeleaf templates to visualize balance scores and provide AI-generated improvement strategies.</p>
+
+            <div class="projects__tech">
+              <span>JavaScript</span>
+              <span>Spring boot</span>
+              <span>HTML/CSS</span>
+              <span>Java</span>
+            </div>
+            <a href="https://youtu.be/DJizzouA3Cc?si=velzFKFQoyzlmRQO" class="projects__link">View Project Video→</a>
+            <br>
+            <a href="#" class="projects__link">Source Code →</a>
+          </div>
+           </div>
+        <div class="projects__card">
+          <img src="assets/project-3.jpg" alt="Weather App" />
+          <div class="projects__content">
+            <br>
+            <h2>Autonomous Emergency Vehicle Detection & Response System</h2>
+  <br>
+  <p><strong>Tech Stack:</strong> Arduino Uno, LM393 Sound Sensor, Infrared (IR) Sensors, LEDs, RF Modules, LoRa Communication Module (RYLR998), ESP32 Microcontroller, Arduino IDE, Proteus 8 Professional</p>
+  <br>
+  <p><strong>About:</strong> Designed and implemented an autonomous system to detect approaching emergency vehicles and dynamically control traffic signals, ensuring prioritized passage and reducing response times in urban environments.</p>
+  <br>
+  <p><strong>Approach:</strong> Utilized sound sensors calibrated to detect specific siren frequencies (700–800 Hz) of emergency vehicles. Integrated IR sensors for vehicle detection and density assessment. Employed RF and LoRa modules for reliable long-range data transmission between roadside units and central controllers.</p>
+  <br>
+  <p><strong>Method:</strong> Deployed LM393 sound sensors at strategic locations to capture emergency sirens. Processed signals using Arduino Uno to trigger traffic signal changes. Implemented ESP32 modules with ESP-NOW protocol for real-time communication and control of traffic lights. Simulated and tested the system using Proteus 8 Professional to validate responsiveness and reliability.</p>
+            <div class="projects__tech">
+              <span>Arduino Uno</span>
+              <span>IR Sensors</span>
+              <span>Microcontroller</span>
+            </div>
+            <a href="https://youtu.be/A67SwyLAFV8?si=WlsX1Q0WlNbVwK1D" class="projects__link">View Project Video →</a>
+            <br>
+            <a href="assets/ev.pdf" target="_blank" class="projects__link">View Project PPT →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section_container skills_container" id="skills">
+      <br>
+      <div class="skills_box">
+  <h2 class="section__header">Skills</h2>
+
+  <div class="skills__category">
+    <h3>Technical Skills</h3>
+    <div class="skill">
+      <i class="fab fa-python"></i> Java
+      <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill">
+      <i class="fab fa-html5"></i> HTML
+      <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill">
+      <i class="fab fa-css3-alt"></i> CSS
+      <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div>
+    </div>
+    <div class="skill">
+      <i class="fab fa-js"></i> JavaScript
+      <div class="progress"><div class="progress-bar" style="width: 60%;"></div></div>
+    </div>
+    <div class="skill">
+      <i class="fas fa-database"></i> MySQL
+      <div class="progress"><div class="progress-bar" style="width: 75%;"></div></div>
+    </div>
+    <div class="skill">
+      <i class="fas fa-server"></i> SpringBoot & Hibernate
+      <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div>
+    </div>
+  </div>
+
+  <div class="skills__category">
+    <h3>Soft Skills</h3>
+    <ul class="soft__skills">
+      <li>Team Collaboration</li>
+      <li>Problem Solving</li>
+      <li>Content Writing</li>
+      <li>Event Management</li>
+      <li>Public Speaking</li>
+    </ul>
+  </div>
+  </div>
+</section>
+    <section class="section__container contact__container" id="contact">
+      <div class="logo">A</div>
+      <h2 class="section__header">Let's Talk With Me!</h2>
+      <p class="section__description">
+        An open invitation to connect, and exploring collaborative opportunities
+        on my personal portfolio website.
+      </p>
+      <div class="contact__socials">
+        <a href="mailto:anushabalaji5@gmail.com"><i class="ri-mail-fill"></i></a>
+        <a href="https://www.linkedin.com/in/anusha-b-341a4029a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="ri-linkedin-fill"></i></a>
+        <a href="https://github.com/anushabalaji5?tab=overview&from=2025-05-01&to=2025-05-20"><i class="ri-github-fill"></i></a>
+      </div>
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
