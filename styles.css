@@ -50,7 +50,7 @@ body::before {
   50% { transform: scale(1.1) rotate(2deg); }
 }
 
-/* Navigation Bar - Updated to match your HTML */
+/* Navigation Bar - Fixed for mobile */
 nav {
   position: fixed;
   top: 0;
@@ -161,12 +161,15 @@ nav.scrolled {
   padding: 1rem 2rem;
 }
 
-/* Mobile Menu */
+/* Mobile Menu - Fixed */
 .nav__menu__btn {
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
   color: var(--light);
+  background: none;
+  border: none;
+  z-index: 1001;
 }
 
 /* Main Content */
@@ -656,7 +659,7 @@ nav.scrolled {
   font-weight: bold;
 }
 
-/* Contact Section */
+/* Contact Section - Fixed for mobile */
 .contact__container {
   padding: 4rem 0;
   text-align: center;
@@ -681,6 +684,7 @@ nav.scrolled {
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .contact__socials a {
@@ -694,6 +698,7 @@ nav.scrolled {
   color: var(--light);
   font-size: 1.5rem;
   transition: var(--transition);
+  text-decoration: none;
 }
 
 .contact__socials a:hover {
@@ -701,28 +706,42 @@ nav.scrolled {
   transform: translateY(-5px);
 }
 
-/* Responsive Design */
+/* Responsive Design - Fixed */
 @media (max-width: 768px) {
+  /* Fixed navigation menu */
   .nav__links {
     position: fixed;
-    top: 80px;
+    top: 0;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 80px);
-    background: var(--darker);
+    height: 100vh;
+    background: rgba(15, 15, 27, 0.98);
+    backdrop-filter: blur(20px);
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    padding-top: 2rem;
+    padding: 2rem;
     transition: var(--transition);
+    z-index: 999;
   }
   
   .nav__links.active {
     left: 0;
   }
   
+  .nav__links li {
+    margin: 1rem 0;
+  }
+  
+  .nav__links li a {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  
   .nav__menu__btn {
     display: block;
+    position: relative;
+    z-index: 1001;
   }
   
   .btn__large {
@@ -776,11 +795,27 @@ nav.scrolled {
   .section__container {
     padding: 0 1rem;
   }
+  
+  /* Fixed contact socials for mobile */
+  .contact__socials {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .contact__socials a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 480px) {
   nav {
     padding: 1rem;
+  }
+  
+  .nav__bar {
+    padding: 0 0.5rem;
   }
   
   .section__header {
@@ -798,6 +833,7 @@ nav.scrolled {
   
   .projects__links {
     flex-direction: column;
+    gap: 0.8rem;
   }
   
   .projects__link {
@@ -806,6 +842,27 @@ nav.scrolled {
   
   .header__content h1 {
     font-size: 2rem;
+  }
+  
+  /* Ensure contact socials are visible on very small screens */
+  .contact__socials {
+    gap: 0.8rem;
+  }
+  
+  .contact__socials a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .contact__container {
+    padding: 3rem 0;
+  }
+  
+  .contact__container .logo {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
   }
 }
 
