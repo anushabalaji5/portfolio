@@ -59,16 +59,48 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 80,
-        behavior: 'smooth'
-      });
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      
+      // Try multiple selectors for the target
+      let target = document.querySelector(targetId);
+      
+      // If not found, try common variations
+      if (!target && targetId === '#contact') {
+        target = document.querySelector('#contact') || 
+                 document.querySelector('.contact') ||
+                 document.querySelector('.contact__container') ||
+                 document.querySelector('[data-section="contact"]');
+      }
+      
+      if (target) {
+        // Calculate offset position
+        const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+        const targetPosition = target.offsetTop - headerHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        console.log('Navigating to:', targetId, 'Position:', targetPosition);
+      } else {
+        console.error('Target not found:', targetId);
+        // Fallback: try to find any element with contact in class name
+        const fallbackTarget = document.querySelector('[class*="contact"]');
+        if (fallbackTarget) {
+          const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+          window.scrollTo({
+            top: fallbackTarget.offsetTop - headerHeight,
+            behavior: 'smooth'
+          });
+          console.log('Using fallback target for contact section');
+        }
+      }
+    });
   });
 });
 
