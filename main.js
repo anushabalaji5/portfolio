@@ -1,36 +1,61 @@
-// Improved mobile menu functionality
+// Fixed mobile menu functionality
 const navLinks = document.getElementById("nav-links");
 const menuBtn = document.getElementById("menu-btn");
-const menuBtnIcon = menuBtn.querySelector("i");
 
-// Toggle mobile menu
-menuBtn.addEventListener("click", (e) => {
-  navLinks.classList.toggle("open");
-  document.body.style.overflow = navLinks.classList.contains("open") ? "hidden" : "";
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
   
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute(
-    "class",
-    isOpen ? "ri-close-line" : "ri-menu-3-line"
-  );
-});
-
-// Close menu when clicking on links
-document.querySelectorAll('.nav__links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove("open");
-    menuBtnIcon.setAttribute("class", "ri-menu-3-line");
-    document.body.style.overflow = "";
-  });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-  if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
-    navLinks.classList.remove("open");
-    menuBtnIcon.setAttribute("class", "ri-menu-3-line");
-    document.body.style.overflow = "";
+  // Check if elements exist before adding event listeners
+  if (!navLinks || !menuBtn) {
+    console.error('Navigation elements not found. Check your HTML IDs.');
+    return;
   }
+  
+  const menuBtnIcon = menuBtn.querySelector("i");
+  
+  if (!menuBtnIcon) {
+    console.error('Menu button icon not found. Check your HTML structure.');
+    return;
+  }
+
+  // Toggle mobile menu
+  menuBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    navLinks.classList.toggle("open");
+    document.body.style.overflow = navLinks.classList.contains("open") ? "hidden" : "";
+    
+    const isOpen = navLinks.classList.contains("open");
+    menuBtnIcon.setAttribute(
+      "class",
+      isOpen ? "ri-close-line" : "ri-menu-3-line"
+    );
+    
+    console.log('Menu toggled:', isOpen ? 'open' : 'closed');
+  });
+
+  // Close menu when clicking on links
+  document.querySelectorAll('.nav__links a, #nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove("open");
+      if (menuBtnIcon) {
+        menuBtnIcon.setAttribute("class", "ri-menu-3-line");
+      }
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+      navLinks.classList.remove("open");
+      if (menuBtnIcon) {
+        menuBtnIcon.setAttribute("class", "ri-menu-3-line");
+      }
+      document.body.style.overflow = "";
+    }
+  });
 });
 
 // Smooth scrolling for anchor links
