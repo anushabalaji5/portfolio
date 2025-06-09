@@ -77,59 +77,109 @@
           display: block;
           cursor: pointer;
           font-size: 1.5rem;
-          color: #000 !important;
+          color: #fff !important;
         }
 
-        /* Fix main content text colors on mobile */
+        /* Fix main content text colors on mobile - MAKE EVERYTHING WHITE */
         .section__header {
-          color: #000 !important;
+          color: #fff !important;
           font-weight: 700;
         }
         
         .section__description {
-          color: #333 !important;
+          color: #fff !important;
           font-weight: 400;
         }
         
         h1, h2, h3, h4, h5, h6 {
-          color: #000 !important;
+          color: #fff !important;
           font-weight: bold;
         }
         
         p {
-          color: #333 !important;
+          color: #fff !important;
         }
         
         .header__content h1 {
-          color: #000 !important;
+          color: #fff !important;
           font-weight: 800;
         }
         
         .about__content p {
-          color: #333 !important;
+          color: #fff !important;
         }
         
         .education__card h4,
         .experience__card h4,
         .projects__card h3 {
-          color: #000 !important;
+          color: #fff !important;
           font-weight: 600;
         }
         
         .education__content p,
         .experience__content li,
         .projects__content p {
-          color: #333 !important;
+          color: #fff !important;
         }
         
         .skill__name,
         .skill__value {
-          color: #000 !important;
+          color: #fff !important;
           font-weight: 500;
         }
         
         .soft__skills li {
-          color: #333 !important;
+          color: #fff !important;
+        }
+        
+        /* Additional mobile text color fixes */
+        .education__content ul li,
+        .experience__content ul li {
+          color: #fff !important;
+        }
+        
+        .projects__tech span {
+          color: #fff !important;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .skills__category h3 {
+          color: #fff !important;
+        }
+        
+        /* Navigation logo and brand text */
+        .nav__bar a {
+          color: #fff !important;
+        }
+        
+        .logo.nav__logo {
+          color: #fff !important;
+        }
+        
+        /* Contact section text */
+        .contact__container h2,
+        .contact__container p {
+          color: #fff !important;
+        }
+        
+        .contact__container .logo {
+          color: #fff !important;
+        }
+        
+        /* Make sure all text elements are white on mobile */
+        * {
+          color: #fff !important;
+        }
+        
+        /* Override for navigation menu items only */
+        .nav__links a {
+          color: #000 !important;
+        }
+        
+        /* Keep button text readable */
+        .btn {
+          color: #000 !important;
         }
       }
       
