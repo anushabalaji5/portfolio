@@ -9,6 +9,32 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Personal Portfolio | Anusha B</title>
+    <style>
+      /* Basic styling to prevent contact button duplication */
+      .btn__large {
+        display: none;
+      }
+      
+      /* Show large contact button on desktop, hide mobile menu contact */
+      @media (min-width: 769px) {
+        .btn__large {
+          display: inline-block;
+        }
+        .nav__links .btn {
+          display: none;
+        }
+      }
+      
+      /* On mobile, show only the mobile menu contact button */
+      @media (max-width: 768px) {
+        .btn__large {
+          display: none;
+        }
+        .nav__links .btn {
+          display: inline-block;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -64,7 +90,7 @@ With a strong academic background, a passion for technology, and a commitment to
 I possess excellent communication skills, having hosted various events and actively participated in orientation and inter-college competitions. These experiences have strengthened my confidence, leadership, and collaborative abilities, helping me connect effectively with diverse audiences. I am fluent in English, Tamil, and Hindi, both in reading and writing, which enables me to work efficiently in multilingual environments.
 <br>
 <br>
-I believe in maintaining a balanced approach between technical expertise and interpersonal skills, which I consider vital for success in today’s dynamic IT world. 
+I believe in maintaining a balanced approach between technical expertise and interpersonal skills, which I consider vital for success in today's dynamic IT world. 
 <br>
 <br>
 Let's connect and grow together!</big> 
